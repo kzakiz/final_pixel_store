@@ -1,0 +1,208 @@
+  :root{
+    --bg-deep:#0a1830;
+    --bg-mid:#0f2340;
+    --card:#16304f;
+    --card-border:#264a70;
+    --cyan:#3fe0c5;
+    --cyan-soft:#7ff0dd;
+    --white:#f3f7fb;
+    --muted:#8fa9c4;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 15% 10%, #12335a 0%, transparent 45%),
+      radial-gradient(circle at 85% 90%, #0f2a4d 0%, transparent 50%),
+      linear-gradient(180deg, var(--bg-deep), var(--bg-mid));
+    font-family:'Inter', sans-serif;
+    color:var(--white);
+    padding: 24px 20px 60px;
+  }
+
+  /* ---------- Header ---------- */
+  .header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    max-width:1100px;
+    margin:0 auto 30px;
+  }
+
+  .icon-btn{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    cursor:pointer;
+    transition:border-color .2s ease, transform .15s ease;
+  }
+  .icon-btn:hover{ border-color:var(--cyan); transform:translateY(-1px); }
+  .icon-btn svg{ width:20px; height:20px; stroke:var(--white); }
+
+  .search-bar{
+    flex:1;
+    background:var(--white);
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 14px;
+    height:44px;
+  }
+  .search-bar svg{ width:18px; height:18px; stroke:#2a3b52; flex-shrink:0; }
+  .search-bar input{
+    border:none;
+    outline:none;
+    flex:1;
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.04em;
+    color:#16304f;
+    background:transparent;
+    text-transform:uppercase;
+  }
+  .search-bar input::placeholder{ color:#9fb0c2; text-transform:none; font-weight:600; }
+
+  .search-action{
+    border:none;
+    background:transparent;
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    font-size:14px;
+    color:#16304f;
+    cursor:pointer;
+    padding:0 4px;
+  }
+  .search-clear{
+    border:none;
+    background:transparent;
+    color:#16304f;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    line-height:1;
+    padding:0 2px;
+  }
+  .search-divider{ width:1px; height:22px; background:#d7dee6; }
+
+  /* ---------- Brand row ---------- */
+  .brand{
+    max-width:1100px;
+    margin:0 auto 26px;
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+  }
+  .brand-name{
+    font-family:'Press Start 2P', monospace;
+    font-size:15px;
+    color:var(--cyan-soft);
+    letter-spacing:.02em;
+  }
+  .brand-sub{
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  /* ---------- Results grid ---------- */
+  .results{
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:16px;
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    border-color:var(--cyan);
+    box-shadow:0 10px 24px -8px rgba(63,224,197,.35);
+  }
+
+  .cover{
+    position:relative;
+    aspect-ratio:3/4;
+    border-radius:10px;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    padding:10px;
+    background:var(--g);
+    image-rendering:pixelated;
+  }
+  .cover::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 2px, transparent 2px 8px);
+    mix-blend-mode:overlay;
+  }
+  .tag{
+    background:rgba(10,20,35,.55);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:6px;
+    padding:4px 8px;
+    font-family:'Press Start 2P', monospace;
+    font-size:9px;
+    letter-spacing:.02em;
+    position:relative;
+    z-index:1;
+  }
+  .badge{
+    position:absolute;
+    top:8px; right:8px;
+    background:#e4123a;
+    color:#fff;
+    font-family:'Press Start 2P', monospace;
+    font-size:9px;
+    padding:4px 6px;
+    border-radius:4px;
+    z-index:1;
+  }
+  .glyph{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:46px;
+    opacity:.9;
+    z-index:0;
+    filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));
+  }
+
+  .price{
+    font-family:'Press Start 2P', monospace;
+    font-size:15px;
+    color:var(--cyan);
+    letter-spacing:.02em;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:760px){
+    .results{ grid-template-columns:repeat(2, 1fr); gap:14px; }
+    .search-bar input{ font-size:12px; }
+  }
+  @media (max-width:480px){
+    .results{ grid-template-columns:1fr; }
+    .header{ flex-wrap:wrap; }
+  }
