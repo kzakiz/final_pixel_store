@@ -1762,3 +1762,272 @@ footer {
     }
 
 }
+
+/* =========================================================
+   MENÚ DESPLEGABLE - CATEGORÍAS
+   ========================================================= */
+
+.dropdown {
+
+    position: relative;
+
+}
+
+
+/* =========================================================
+   BOTÓN CATEGORÍAS
+   ========================================================= */
+
+.dropdown-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: #bdbdbd;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+.dropdown-btn span {
+
+    color: var(--red);
+
+    font-size: 17px;
+
+    transition: .25s ease;
+
+}
+
+.dropdown:hover .dropdown-btn {
+
+    color: white;
+
+}
+
+.dropdown:hover .dropdown-btn span {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 20px);
+
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-10px);
+
+    width: 230px;
+
+    padding: 12px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-top: 2px solid var(--red);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.7),
+
+        0 0 25px rgba(229,9,20,.08);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+
+        opacity .25s ease,
+
+        transform .25s ease,
+
+        visibility .25s ease;
+
+    z-index: 1000;
+
+}
+
+
+/* =========================================================
+   ABRIR MENÚ AL PASAR EL MOUSE
+   ========================================================= */
+
+.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(-50%) translateY(0);
+
+}
+
+
+/* =========================================================
+   TÍTULO DEL MENÚ
+   ========================================================= */
+
+.dropdown-title {
+
+    padding: 9px 12px 6px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================================
+   OPCIONES
+   ========================================================= */
+
+.dropdown-menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: none;
+
+    letter-spacing: 0;
+
+    transition: .2s ease;
+
+}
+
+
+/* Quitamos la línea roja del nav principal */
+
+.dropdown-menu a::after {
+
+    display: none;
+
+}
+
+
+/* Hover */
+
+.dropdown-menu a:hover {
+
+    background: #1c1c1c;
+
+    color: white;
+
+    transform: translateX(3px);
+
+}
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
+
+.menu-icon {
+
+    width: 25px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+.dropdown-line {
+
+    height: 1px;
+
+    margin: 8px 5px;
+
+    background: #292929;
+
+}
+
+
+/* =========================================================
+   EFECTO ROJO AL PASAR
+   ========================================================= */
+
+.dropdown-menu a:hover .menu-icon {
+
+    filter: brightness(1.3);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .dropdown-menu {
+
+        left: 0;
+
+        transform: translateY(-10px);
+
+    }
+
+    .dropdown:hover .dropdown-menu {
+
+        transform: translateY(0);
+
+    }
+
+}
