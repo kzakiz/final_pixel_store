@@ -1,0 +1,69 @@
+/*=========================
+    HERO OFERTAS
+==========================*/
+
+.hero .tag{
+    background:#e50914;
+}
+
+.hero h1{
+    max-width:650px;
+}
+
+.hero-image img{
+    border-radius:18px;
+    box-shadow:0 25px 45px rgba(0,0,0,.45);
+}
+
+/*=========================
+    CARDS
+==========================*/
+
+.games{
+    margin-top:90px;
+}
+
+.card{
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.discount{
+    background:#e50914;
+    font-weight:700;
+}
+
+.bottom span{
+    color:#fff;
+}
+
+.bottom button:hover{
+    transform:scale(1.05);
+}
+
+/*=========================
+    TITULO
+==========================*/
+
+.section-title h2{
+    color:#fff;
+}
+
+.section-title a{
+    color:#e50914;
+}
+
+.section-title a:hover{
+    color:#ff4545;
+}
+
+/*=========================
+    FOOTER
+==========================*/
+
+footer{
+    margin-top:100px;
+}
