@@ -1,121 +1,490 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pixel Store</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    </head>
 
-    <body>
-        <header>
-            <div class="logo">
-                <i class="fa-solid fa-gamepad"></i>
-                Pixel Store
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pixel Store</title>
+
+    <link rel="stylesheet" href="seccion1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="blur blur1"></div>
+<div class="blur blur2"></div>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-gamepad"></i>
+
+        <h2>Pixel Store</h2>
+
+    </div>
+
+    <nav>
+
+        <a href="#">Inicio</a>
+        <a href="#">Explorar</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Categorías</a>
+
+    </nav>
+
+    <div class="right">
+
+        <div class="search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+            type="text"
+            placeholder="Buscar juegos...">
+
+        </div>
+
+        <button class="login">
+
+            Iniciar sesión
+
+        </button>
+
+    </div>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-info">
+
+        <span class="tag">
+
+            ★ Nuevo lanzamiento
+
+        </span>
+
+        <h1>
+
+            Descubre una nueva forma de jugar.
+
+        </h1>
+
+        <p>
+
+            Compra y descarga videojuegos para
+            PlayStation, Xbox y Nintendo desde una
+            sola plataforma.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary">
+
+                Comprar ahora
+
+            </button>
+
+            <button class="secondary">
+
+                Explorar catálogo
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+        src="banner.jpg"
+        alt="Spider Man">
+
+    </div>
+
+</section>
+
+<section class="games">
+
+    <div class="section-title">
+
+        <h2>
+
+            Juegos populares
+
+        </h2>
+
+        <a href="#">
+
+            Ver todos
+
+        </a>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <span class="discount">
+
+                -30%
+
+            </span>
+
+            <img
+            src="mariokart.jpg"
+            alt="Mario Kart">
+
+            <div class="info">
+
+                <h3>
+
+                    Mario Kart 8 Deluxe
+
+                </h3>
+
+                <p>
+
+                    Nintendo Switch
+
+                </p>
+
+                <div class="bottom">
+
+                    <span>
+
+                        $289.900
+
+                    </span>
+
+                    <button>
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
             </div>
 
-            <nav>
-                <details class="menu">
-                    <summary>
-                        <i class="fa-solid fa-bars"></i>
-                    </summary>
-                    <div class="dropdown">
-                        <h3>Categorías</h3>
+        </div>
 
-                        <a href="#">Acción</a>
-                        <a href="#">Aventura</a>
-                        <a href="#">Deportes</a>
-                        <a href="#">Terror</a>
-                        <a href="#">RPG</a>
-                        
-                        <hr>
+        <div class="card">
 
-                        <h3>Consolas</h3>
+            <span class="discount">
 
-                        <a href="#">PlayStation</a>
-                        <a href="#">Xbox</a>
-                        <a href="#">Nintendo</a>
-                    </div>
-                </details>
-            </nav>
+                -15%
 
-            <div class="search">
-                <input type="text" placeholder="Buscar juegos...">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+            </span>
+
+            <img
+            src="mk1.jpg"
+            alt="MK1">
+
+            <div class="info">
+
+                <h3>
+
+                    Mortal Kombat 1
+
+                </h3>
+
+                <p>
+
+                    PlayStation 5
+
+                </p>
+
+                <div class="bottom">
+
+                    <span>
+
+                        $259.900
+
+                    </span>
+
+                    <button>
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
             </div>
 
-            <div class="buttons">
-                <button class="login">
-                    Iniciar sesión
-                </button>
+        </div>
 
-                <button class="cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </button>
+        <div class="card">
+
+            <img
+            src="re4.jpg"
+            alt="Resident Evil">
+
+            <div class="info">
+
+                <h3>
+
+                    Resident Evil 4
+
+                </h3>
+
+                <p>
+
+                    PlayStation 5
+
+                </p>
+
+                <div class="bottom">
+
+                    <span>
+
+                        $239.900
+
+                    </span>
+
+                    <button>
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
             </div>
 
-            <header>
-                <section class="hero">
-                    <h1>Bienvenido a Pixel Store</h1>
-                    <p>Compra y descarga tus videojuegos favoritos</p>
-                    <a href="#catalogo">
-                        <button>Explorar juegos</button>
-                    </a>
-                </section>
-                <section id="catalogo">
-                    <h2>Juegos destacados</h2>
-                    <div class="games">
-                        <div class="card">
-                            <img src="img/mariokart.jpg" alt="Mario Kart">
-                            <h3>Mario Kart 8 Deluxe</h3>
-                            <p class="console">Nintendo Switch</p>
-                            <p class="price">$289.900</p>
-                            <button>Comprar</button>
-                        </div>
-                        <div class="card">
-                            <img src="img/mortal-kombat.jpg" alt="Mortal Kombat">
-                            <h3>Mortal Kombat 11</h3>
-                            <p class="console">PlayStation 5</p>
-                            <p class="price">$199.900</p>
-                            <button>Comprar</button>
-                        </div>
-                        <div class="card">
-                            <img src="img/spiderman.jpg" alt="Spider-Man">
-                            <h3>Spider-Man 2</h3>
-                            <p class="console">PlayStation 5</p>
-                            <p class="price">$279.900</p>
-                            <button>Comprar</button>
-                        </div>
-                        <div class="card">
-                            <img src="img/resident-evil.jpg" alt="Resident Evil">
-                            <h3>Resident Evil 4</h3>
-                            <p class="console">PlayStation 5</p>
-                            <p class="price">$299.900</p>
-                            <button>Comprar</button>
-                        </div>
-                        <div class="card">
-                            <img src="img/halo.jpg" alt="Halo">
-                            <h3>Halo Infinite</h3>
-                            <p class="console">Xbox Series X</p>
-                            <p class="price">$249.900</p>
-                            <button>Comprar</button>
-                        </div>
-                        <div class="card">
-                            <img src="img/fc25.jpg" alt="FIFA 25">
-                            <h3>FIFA 25</h3>
-                            <p class="console">PlayStation 5</p>
-                            <p class="price">$299.900</p>
-                            <button>Comprar</button>
-                        </div>
-                    </div>
-                </section>
-                <footer>
-                    <h3>Pixel Store c 2026</h3>
-                    <p>Los mejores videojuegos al mejor precio</p>
-                </footer>
-            </header>
-    </body>
+        </div>
+
+                <div class="card">
+
+            <span class="discount">
+                -20%
+            </span>
+
+            <img src="spiderman2.jpg" alt="Spider-Man 2">
+
+            <div class="info">
+
+                <h3>Marvel's Spider-Man 2</h3>
+
+                <p>PlayStation 5</p>
+
+                <div class="bottom">
+
+                    <span>$279.900</span>
+
+                    <button>Comprar</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <span class="discount">
+                -45%
+            </span>
+
+            <img src="halo.jpg" alt="Halo Infinite">
+
+            <div class="info">
+
+                <h3>Halo Infinite</h3>
+
+                <p>Xbox Series X</p>
+
+                <div class="bottom">
+
+                    <span>$199.900</span>
+
+                    <button>Comprar</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="fc25.jpg" alt="EA Sports FC 25">
+
+            <div class="info">
+
+                <h3>EA Sports FC 25</h3>
+
+                <p>PlayStation 5</p>
+
+                <div class="bottom">
+
+                    <span>$249.900</span>
+
+                    <button>Comprar</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CATEGORÍAS ================= -->
+
+<section class="categories">
+
+    <h2>Explora por plataforma</h2>
+
+    <div class="category-grid">
+
+        <div class="category">
+
+            <img src="ps.jpg" alt="PlayStation">
+
+            <h3>PlayStation</h3>
+
+        </div>
+
+        <div class="category">
+
+            <img src="xbox.jpg" alt="Xbox">
+
+            <h3>Xbox</h3>
+
+        </div>
+
+        <div class="category">
+
+            <img src="nintendo.jpg" alt="Nintendo">
+
+            <h3>Nintendo</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OFERTAS ================= -->
+
+<section class="offers">
+
+    <div class="offer-box">
+
+        <div class="offer-text">
+
+            <span>OFERTA ESPECIAL</span>
+
+            <h2>Hasta 70% de descuento</h2>
+
+            <p>
+
+                Aprovecha nuestras promociones en títulos
+                seleccionados por tiempo limitado.
+
+            </p>
+
+            <button>
+
+                Ver ofertas
+
+            </button>
+
+        </div>
+
+        <img src="controller.jpg" alt="Control">
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div>
+
+            <h2>Pixel Store</h2>
+
+            <p>
+
+                Tu tienda digital para comprar videojuegos
+                de PlayStation, Xbox y Nintendo.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Navegación</h4>
+
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Ofertas</a>
+
+        </div>
+
+        <div>
+
+            <h4>Soporte</h4>
+
+            <a href="#">Contacto</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Términos</a>
+
+        </div>
+
+        <div>
+
+            <h4>Síguenos</h4>
+
+            <div class="social">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <i class="fa-brands fa-x-twitter"></i>
+
+                <i class="fa-brands fa-discord"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 Pixel Store. Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+</body>
+
 </html>
