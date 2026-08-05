@@ -618,3 +618,182 @@ body {
     }
 
 }
+
+.nav > a,
+.category-button {
+
+    color: #d0d0d0;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.25s;
+
+}
+
+
+.nav > a:hover,
+.category-button:hover {
+
+    color: white;
+
+}
+
+
+.nav > a:first-child {
+
+    color: var(--red);
+
+}
+
+
+/* =====================================================
+   CATEGORÍAS
+===================================================== */
+
+.category-menu {
+
+    position: relative;
+
+}
+
+
+.category-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 10px 0;
+
+}
+
+
+.category-button i {
+
+    font-size: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.category-menu:hover
+.category-button i {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.category-dropdown {
+
+    position: absolute;
+
+    top: 48px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    width: 190px;
+
+    padding: 8px;
+
+    background: rgba(17, 17, 17, 0.97);
+
+    border: 1px solid
+        rgba(229, 9, 20, 0.35);
+
+    border-radius: 12px;
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0, 0, 0, 0.6),
+
+        0 0 20px
+        rgba(229, 9, 20, 0.08);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.25s;
+
+}
+
+
+.category-menu:hover
+.category-dropdown {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+.category-dropdown a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    color: #ccc;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+}
+
+
+.category-dropdown a i {
+
+    width: 18px;
+
+    color: var(--red);
+
+}
+
+
+.category-dropdown a:hover {
+
+    background: rgba(
+        229,
+        9,
+        20,
+        0.12
+    );
+
+    color: white;
+
+    transform: translateX(3px);
+
+}
