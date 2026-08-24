@@ -3792,3 +3792,69 @@ footer {
     }
 
 }
+
+/* =========================================================
+   BOTÓN DE PERFIL
+========================================================= */
+
+.profile-btn {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--red);
+    border: 2px solid var(--red);
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: .25s ease;
+
+    flex-shrink: 0;
+
+}
+
+/* Icono */
+
+.profile-btn i {
+
+    color: white;
+
+    pointer-events: none;
+
+}
+
+/* Al pasar el cursor */
+
+.profile-btn:hover {
+
+    background: var(--red-light);
+
+    border-color: var(--red-light);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(229, 9, 20, .35);
+
+}
+
+/* Al hacer clic */
+
+.profile-btn:active {
+
+    transform: scale(.94);
+
+}
