@@ -96,8 +96,15 @@ header {
 }
 
 .logo i {
-    color: var(--red);
-    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--red);
+    color: white;
+    font-size: 20px;
+    transform: skew(-8deg);
 }
 
 .logo h2 {
