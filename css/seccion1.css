@@ -3793,6 +3793,7 @@ footer {
 
 }
 
+<<<<<<< HEAD:css/seccion1.css
 /*============================
     CARRITO
 =============================*/
@@ -3866,4 +3867,44 @@ footer {
 
     font-weight: 700;
 
+=======
+/* =========================================
+   PERFIL - SESIÓN INICIADA
+========================================= */
+
+.profile-button {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    transition:
+        .2s ease,
+        transform .2s ease;
+}
+
+
+.profile-button i {
+    font-size: 17px;
+}
+
+
+.profile-button:hover {
+    background: #e50914;
+    border-color: #e50914;
+
+    color: white;
+
+    transform: translateY(-2px);
+>>>>>>> 71d27293b116e371fd60adc2cef6d8a1753c2d92:seccion1.css
 }
