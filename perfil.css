@@ -144,6 +144,126 @@ nav a.active {
 
 
 /* =========================================================
+   MENÚ DESPLEGABLE - CATEGORÍAS
+========================================================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    background: transparent;
+    border: none;
+
+    color: #bdbdbd;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.dropdown-btn span {
+    color: var(--red);
+    font-size: 17px;
+
+    transition: .25s ease;
+}
+
+.dropdown:hover .dropdown-btn {
+    color: var(--white);
+}
+
+.dropdown:hover .dropdown-btn span {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+
+    width: 230px;
+    padding: 12px;
+
+    background: #111;
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--red);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .7), 0 0 25px rgba(229, 9, 20, .08);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-title {
+    padding: 9px 12px 6px;
+
+    color: var(--gray-dark);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 11px 12px;
+
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: var(--black-hover);
+    color: var(--white);
+
+    transform: translateX(3px);
+}
+
+.menu-icon {
+    width: 25px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown-line {
+    height: 1px;
+    margin: 8px 5px;
+
+    background: var(--border);
+}
+
+.dropdown-menu a:hover .menu-icon {
+    filter: brightness(1.3);
+}
+
+
+/* =========================================================
    PARTE DERECHA
 ========================================================= */
 
@@ -597,6 +717,15 @@ footer {
         margin-left: 0;
 
         justify-content: center;
+    }
+
+    .dropdown-menu {
+        left: 0;
+        transform: translateY(-10px);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        transform: translateY(0);
     }
 
     .right {
